@@ -130,7 +130,7 @@ python -c 'import os; print(os.urandom(24).hex())'
 
 3. Obtain a GOOGLE_CLIENT_ID:
         
-- Follow the instructions in the Google Developer Console to create OAuth 2.0 credentials and obtain a GOOGLE_CLIENT_ID for the project.
+- Follow the instructions in the [Google Developer Console](https://support.google.com/cloud/answer/6158849?hl=en) to create OAuth 2.0 credentials and obtain a GOOGLE_CLIENT_ID for the project.
 - You will use this ID for Google Sign-In functionality in the Flask app.
 
 #### Create a .env file
