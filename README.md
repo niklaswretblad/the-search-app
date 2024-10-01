@@ -102,16 +102,52 @@ Make sure you have all required Python packages installed. Run the following com
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variable`
+### 3. Configure Environment Variables
 
-Some environment variables may be required for the Flask app (e.g., FLASK_APP, FLASK_ENV, etc.).
+The Flask app requires several environment variables. You need to generate your own SECRET_KEY, JWT_SECRET_KEY, and GOOGLE_CLIENT_ID for security purposes. These keys should be defined in a .env file in the backend directory.
 
-Create a .env file in the backend directory and set up your environment variables like this:
+#### Steps to Set Up the Environment Variables:
+
+1. Generate a SECRET_KEY:
+
+- In your terminal or Python shell, run the following command to generate a secure secret key:
 
 ```bash
-FLASK_APP=app.py
-FLASK_ENV=development
+python -c 'import os; print(os.urandom(24).hex())'
 ```
+
+- Copy the generated key and save it for use in the .env file.
+
+2. Generate a JWT_SECRET_KEY:
+
+- Similarly, generate a JWT secret key:
+
+```bash
+python -c 'import os; print(os.urandom(24).hex())'
+```
+
+- Copy the key and save it.
+
+3. Obtain a GOOGLE_CLIENT_ID:
+        
+- Follow the instructions in the Google Developer Console to create OAuth 2.0 credentials and obtain a GOOGLE_CLIENT_ID for the project.
+- You will use this ID for Google Sign-In functionality in the Flask app.
+
+#### Create a .env file
+
+After generating the required keys, create a .env file in the backend folder and add the following keys:
+
+```bash
+SECRET_KEY=your-generated-secret-key
+JWT_SECRET_KEY=your-generated-jwt-secret-key
+GOOGLE_CLIENT_ID=your-google-client-id
+```
+
+Replace your-generated-secret-key, your-generated-jwt-secret-key, and your-google-client-id with the actual values.
+- SECRET_KEY: Used by Flask to secure sessions.
+- JWT_SECRET_KEY: Used for signing JWTs for user authentication.
+- GOOGLE_CLIENT_ID: Client ID for Google OAuth 2.0 authentication.
+
 
 ### 4. SQLite Database Setup
 
