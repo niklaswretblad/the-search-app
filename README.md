@@ -36,13 +36,36 @@ git clone <your-repo-url>
 cd <your-repo-directory>
 ```
 
-### 2. Open the Project in Android Studio
+2. Obtain a Google Maps API Key
+
+The Android app uses the Google Maps API. To run the app, you need to obtain a Google Maps API key and configure it in the project.
+Steps to Obtain a Google Maps API Key:
+
+- Go to the Google Cloud Console.
+- Create a new project (or use an existing project).
+- Navigate to the API & Services > Credentials page.
+- Click Create Credentials and select API Key.
+- Once the API Key is generated, copy it for use in the next step.
+- Enable the Google Maps Android API in the Google Cloud Console.
+
+Configure the API Key:
+
+- Create a secrets.properties file in the root directory of the Android project (if it doesn't already exist).
+- Add the following line to the secrets.properties file:
+
+```properties
+MAPS_API_KEY=your-google-maps-api-key
+```
+
+Replace your-google-maps-api-key with the API key you obtained from the Google Cloud Console.
+
+### 3. Open the Project in Android Studio
 
 1. Open Android Studio`
 2. Select "Open an Existing Project" and navigate to the android folder in the repository.
 3. Let Android Studio sync the project. It will install necessary dependencies and configure the project.
 
-### 3. Build the Project
+### 4. Build the Project
 
 - Make sure you have Android 10.0 (API Level 29) installed (see Prerequisites section for how to check your SDK version).
 - From the toolbar, select "Build > Make Project".
@@ -51,7 +74,7 @@ cd <your-repo-directory>
 ./gradlew assembleDebug
 ```
 
-### 4. Run the App
+### 5. Run the App
 
 - Connect an Android device or start an emulator. Make sure to use an android version with the google APIs installed.
 - In Android Studio, click the Run button or use the following command to install the app on the device:
