@@ -12,11 +12,16 @@ Ensure you have the following tools installed on your system before proceeding:
 1. **Android Development**:
    - [Android Studio](https://developer.android.com/studio)
    - Java Development Kit (JDK)
-   - Android SDK
+   - Android SDK (API Level 29 or higher)
+
+   **How to Check the Android SDK Version:**
+   - Open Android Studio.
+   - Go to **File** > **Project Structure** and check the **SDK Location** and version.
+   - Alternatively, go to **Tools** > **SDK Manager** and ensure **Android 10.0 (API Level 29)** is installed under **SDK Platforms**.
 
 2. **Flask Backend**:
-   - [Python 3.8+](https://www.python.org/downloads/)
-   - Virtual Environment tool (`venv` or `virtualenv`)
+   - [Python 3.10](https://www.python.org/downloads/)
+   - Virtual Environment tool (`venv`)
    - Package Manager: `pip`
 
 ---
@@ -39,7 +44,7 @@ cd <your-repo-directory>
 
 ### 3. Build the Project
 
-- Make sure you have the required Android SDK version installed.
+- Make sure you have Android 10.0 (API Level 29) installed (see Prerequisites section for how to check your SDK version).
 - From the toolbar, select "Build > Make Project".
 - Alternatively, you can build it from the command line:
 ```bash
@@ -60,23 +65,23 @@ cd <your-repo-directory>
 
 Navigate to the backend folder in the repository and create a virtual environment:
 
-bash
-
+```bash
 cd backend
-python3 -m venv venv
+python3.10 -m venv venv
 source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
+```
 
 ### 2. Install Dependencies
 
 Make sure you have all required Python packages installed. Run the following command to install dependencies from requirements.txt:
 
-bash
-
+```bash
 pip install -r requirements.txt
+```
 
-### 3. Configure Environment Variables
+### 3. Configure Environment Variable`
 
-Some environment variables may be required for the Flask app (e.g., FLASK_APP, FLASK_ENV, database credentials, etc.).
+Some environment variables may be required for the Flask app (e.g., FLASK_APP, FLASK_ENV, etc.).
 
 Create a .env file in the backend directory and set up your environment variables like this:
 
@@ -85,17 +90,9 @@ FLASK_APP=app.py
 FLASK_ENV=development
 ```
 
-### 4. Database Setup (If applicable)
+### 4. SQLite Database Setup
 
-If your Flask app uses a database (like SQLite, PostgreSQL, etc.), set up the database by running migration commands or creating the database manually.
-
-For example, if using Flask-Migrate:
-
-```bash
-flask db init
-flask db migrate
-flask db upgrade
-```
+The app is configured to use an SQLite database locally. The database will be automatically created when you run the application for the first time. No manual setup is required for SQLite.
 
 ### 5. Run the Flask Application
 
