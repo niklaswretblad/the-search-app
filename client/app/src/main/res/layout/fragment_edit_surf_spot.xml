@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Spot Name" />
+
+    <TextView
+        android:id="@+id/text_view_difficulty_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty/Danger Rating"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rating_bar_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="1"
+        android:contentDescription="Difficulty Rating" />
+
+    <TextView
+        android:id="@+id/text_view_quality_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quality Rating"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rating_bar_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="1"
+        android:contentDescription="Quality Rating" />
+
+    <EditText
+        android:id="@+id/edit_text_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_red_dark" />
+</LinearLayout>
