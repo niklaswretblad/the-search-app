@@ -29,10 +29,10 @@ First, clone the repository to your local machine:
 ```bash
 git clone <your-repo-url>
 cd <your-repo-directory>
-
+```
 
 ### 2. Open the Project in Android Studio
 
-- Open Android Studio.
-- Select "Open an Existing Project" and navigate to the android folder in the repository.
-- Let Android Studio sync the project. It will install necessary dependencies and configure the project.
+1. Open Android Studio`
+2. Select "Open an Existing Project" and navigate to the android folder in the repository.
+3. Let Android Studio sync the project. It will install necessary dependencies and configure the project.
