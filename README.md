@@ -36,22 +36,22 @@ git clone <your-repo-url>
 cd <your-repo-directory>
 ```
 
-2. Obtain a Google Maps API Key
+### 2. Obtain a Google Maps API Key
 
 The Android app uses the Google Maps API. To run the app, you need to obtain a Google Maps API key and configure it in the project.
 Steps to Obtain a Google Maps API Key:
 
-- Go to the Google Cloud Console.
-- Create a new project (or use an existing project).
-- Navigate to the API & Services > Credentials page.
-- Click Create Credentials and select API Key.
-- Once the API Key is generated, copy it for use in the next step.
-- Enable the Google Maps Android API in the Google Cloud Console.
+1. Go to the Google Cloud Console.
+2. Create a new project (or use an existing project).
+3. Navigate to the API & Services > Credentials page.
+4. Click Create Credentials and select API Key.
+5. Once the API Key is generated, copy it for use in the next step.
+6. Enable the Google Maps Android API in the Google Cloud Console.
 
 Configure the API Key:
 
-- Create a secrets.properties file in the root directory of the Android project (if it doesn't already exist).
-- Add the following line to the secrets.properties file:
+1. Create a secrets.properties file in the root directory of the Android project (if it doesn't already exist).
+2. Add the following line to the secrets.properties file:
 
 ```properties
 MAPS_API_KEY=your-google-maps-api-key
