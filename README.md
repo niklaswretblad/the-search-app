@@ -1,7 +1,7 @@
 
 # Get Started Guide
 
-This project consists of "The Search", a surf spot tool application. It consists of an Android mobile application and a Python Flask backend. Follow the instructions below to download, build, and run both the Android app and the backend.
+This project consists of "The Search", a tool for saving information about your own defined surfspots on a map! It consists of an Android mobile application and a Python Flask backend. Follow the instructions below to download, build, and run both the Android app and the backend.
 
 ---
 
